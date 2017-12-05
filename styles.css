@@ -3,8 +3,10 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-size: 18px;
+  background-image: url('src/danceFloor.jpg');
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -24,4 +26,14 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.rickRoll {
+  border: none;
+  
+}
+
+.fred {
+  border: none;
+  
 }
