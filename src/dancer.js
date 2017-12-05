@@ -17,3 +17,12 @@ makeDancer.prototype.setPosition = function (top, left) {
   };
   this.$node.css(styleSettings);
 };
+makeDancer.prototype.lineup = function(i) {
+  var node = this.$node[0];
+  $(node).css({
+    'margin': '0',
+    'top': '50%',
+    'transform': '',
+    'display': 'inline-block'
+  });
+};

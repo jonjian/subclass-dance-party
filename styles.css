@@ -11,7 +11,9 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+
+
+.title, .addDancerButton, .lineup{
   padding:5px 12px;
   float:right;
 }
@@ -30,10 +32,21 @@ body, a:link, a:visited, a:active{
 
 .rickRoll {
   border: none;
-  
+  float: bottom;
 }
 
 .fred {
+  border: none; 
+}
+
+.makeCarlton {
   border: none;
+}
+
+.Dankify{
+  border:none;
+}
+
+.lineupnow {
   
 }
