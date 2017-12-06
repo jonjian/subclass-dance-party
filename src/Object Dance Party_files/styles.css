@@ -38,6 +38,7 @@ body, a:link, a:visited, a:active{
 
 .fred {
   border: none; 
+  position: relative;
 }
 
 .makeCarlton {

@@ -1,6 +1,7 @@
 var makeBlinkyDancer = class makeBlinkyDancer extends makeDancer {
   constructor(top, left, timeBetweenSteps) {
-    super(top, left, timeBetweenSteps);
+    super();
+    super.setPosition(top, left);
   }
 
   step() {

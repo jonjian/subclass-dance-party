@@ -7,18 +7,6 @@ $(document).ready(function() {
     }
   });
 
-  window.setInterval(function() {
-    debugger;
-    for (var i = 0; i < window.dancers.length; i++) {
-      if (window.dancers[i].identifier === 'makeCarlton' && window.dancers[i + 1].identifier === 'Dankify') {
-        var averageTop = (window.dancers[i].top + window.dancers[i + 1].top) / 2;
-        var averageLeft = (window.dancers[i].left + window.dancers[i + 1].left) / 2;
-        $(window.dancers[i].$node[0]).animate({ left: (averageLeft - 100) + 'px', top: averageTop + 'px'});
-        $(window.dancers[i + 1].$node[0]).animate({ left: (averageLeft + 100) + 'px', top: averageTop + 'px'});
-      }
-    }
-  }, 5000);
-
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -46,14 +34,13 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
-  $(document).on('mouseenter', '.fred', function() {
-    var dWidth = $(window).width() - 100; // 100 = image width
-    var dHeight = $(window).height() - 100;// 100 = image height
+  $('.dissapointedFred').mouseover('hover', function(event) {
+    var dWidth = $(document).width() - 100; // 100 = image width
+    var dHeight = $(document).height() - 100;// 100 = image height
     var nextX = Math.floor(Math.random() * dWidth);
     var nextY = Math.floor(Math.random() * dHeight);
     $(this).animate({ left: nextX + 'px', top: nextY + 'px' });
   });
-
 });
 
 

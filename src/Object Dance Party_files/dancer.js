@@ -9,7 +9,7 @@ var makeDancer = class makeDancer {
   }
 
   step() {
-    setTimeout(() => this.step(), this.timeBetweenSteps);
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
   }
 
   setPosition(top, left) {
@@ -19,13 +19,11 @@ var makeDancer = class makeDancer {
     };
     this.$node.css(styleSettings);
   }
- 
 
   lineup(i) {
     var node = this.$node[0];
     var distanceApart = ($(window).width()) / i;
     $(node).css({
-      'position': 'absolute',
       'margin': 0,
       'top': '50%',
       'transform': '',
@@ -33,3 +31,13 @@ var makeDancer = class makeDancer {
     });
   }
 }; 
+
+jQuery(function($) {
+  $('.fred').mouseover(function() {
+    var dWidth = $(document).width() - 100; // 100 = image width
+    var dHeight = $(document).height() - 100;// 100 = image height
+    var nextX = Math.floor(Math.random() * dWidth);
+    var nextY = Math.floor(Math.random() * dHeight);
+    $(this).animate({ left: nextX + 'px', top: nextY + 'px' });
+  });
+});

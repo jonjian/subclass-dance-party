@@ -1,14 +1,12 @@
 var makeCarlton = class makeCarlton extends makeDancer {
   constructor(top, left, timeBetweenSteps) {
-    super(top, left, timeBetweenSteps);
+    super();
     this.$node.addClass('makeCarlton');
     this.$node.append('<img src="src/carlton.gif"></img>');
-    this.top = top;
-    this.left = left;
-    this.identifier = 'makeCarlton';
+    super.setPosition(top, left);
   }
 
-  step() { 
+  step() {
     this.$node.toggle();
   }
 };
